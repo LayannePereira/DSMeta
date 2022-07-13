@@ -9,13 +9,13 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table (name = "tb_sales")
+@Table(name = "tb_sales")
 public class Sale {
-	
+
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY) 
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-	private String sallerName;
+	private String sellerName;
 	private Integer visited;
 	private Integer deals;
 	private Double amount;
@@ -24,8 +24,6 @@ public class Sale {
 	public Sale() {
 	}
 
-	//Getters and Setters
-	
 	public Long getId() {
 		return id;
 	}
@@ -34,12 +32,12 @@ public class Sale {
 		this.id = id;
 	}
 
-	public String getSallerName() {
-		return sallerName;
+	public String getSellerName() {
+		return sellerName;
 	}
 
-	public void setSallerName(String sallerName) {
-		this.sallerName = sallerName;
+	public void setSellerName(String sellerName) {
+		this.sellerName = sellerName;
 	}
 
 	public Integer getVisited() {
@@ -73,5 +71,4 @@ public class Sale {
 	public void setDate(LocalDate date) {
 		this.date = date;
 	}
-
 }
